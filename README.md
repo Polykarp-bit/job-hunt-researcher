@@ -1,7 +1,7 @@
 # 🧭 job-hunt-researcher
 
-A [Claude Code Skill](https://docs.claude.com/en/docs/claude-code/skills) that turns "find me some jobs" into a
-disciplined, resumable research process — plus a zero-backend HTML viewer to track what you've already checked.
+A [Claude Code Skill](https://code.claude.com/docs/en/skills) that turns "find me some jobs" into a disciplined,
+resumable research process — plus a zero-backend HTML viewer to track what you've already checked.
 
 I built this while doing my own job search and kept running into the same problems every AI-assisted search hits:
 confident-looking links that turn out to be dead, results that are just the same three job boards reshuffled, and no
@@ -64,16 +64,31 @@ cd my-search && python3 -m http.server 8000
 
 (`fetch()` needs an actual HTTP server — opening `index.html` directly as a `file://` URL will fail in most browsers.)
 
+## Validating your data
+
+`scripts/validate.js` checks a `jobs.json` against the schema before you trust it — required fields present, every
+`cat` maps to an entry in `meta.categories`, every `url` is a well-formed absolute URL, and it flags likely duplicate
+listings. No dependencies, plain Node:
+
+```bash
+node scripts/validate.js examples/demo/data/jobs.json
+# ✓ examples/demo/data/jobs.json is valid — 6 job(s), 4 categories.
+```
+
+It exits non-zero on any schema error, so it doubles as a pre-commit check for a real search's `data/jobs.json`.
+
 ## Project layout
 
 ```
 job-hunt-researcher/
 ├── SKILL.md                    # the skill definition Claude Code reads
+├── scripts/
+│   └── validate.js             # schema check for a jobs.json — no dependencies
 ├── templates/
 │   ├── jobs.template.json      # empty data schema to start a new search from
 │   ├── tracker-template.md     # resumable company-tracker starting point
 │   └── viewer/                 # the HTML/CSS/JS viewer (generic, data-driven)
-└── examples/demo/               # fictional sample data, just to show the viewer working
+└── examples/demo/              # fictional sample data, just to show the viewer working
 ```
 
 ## Tech stack

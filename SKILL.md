@@ -135,6 +135,10 @@ One file drives the whole viewer — copy `templates/jobs.template.json` as a st
 Nothing about the viewer is region- or role-specific — nulling out `meta` and swapping `jobs` repurposes the exact
 same app for a different search from scratch.
 
+Before finishing a round, run `node scripts/validate.js data/jobs.json` — it checks required fields, that every
+`cat` has a matching entry in `meta.categories`, that every `url` is a well-formed absolute URL, and flags likely
+duplicate role+company pairs. Fix anything it flags before reporting the round as done.
+
 ## Rendering the viewer
 
 Copy `templates/viewer/` (index.html, css/style.css, js/app.js) next to your `data/jobs.json` — the JS fetches
