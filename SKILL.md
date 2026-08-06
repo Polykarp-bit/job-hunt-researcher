@@ -6,9 +6,9 @@ description: Use this skill when the user wants to research and compile a verifi
 # Job Hunt Researcher
 
 A repeatable process for building a **verified**, **de-duplicated**, **resumable** list of job openings — plus a
-zero-backend HTML viewer to browse and track progress against it. Born out of a real job search (see
-`examples/rheinland-2026/`) that went through ten-plus research rounds; this file is what that process looks like
-distilled into something you can run again for any role, any region.
+zero-backend HTML viewer to browse and track progress against it. Born out of a real, multi-round job search; this
+file is what that process looks like distilled into something you can run again for any role, any region. See
+`examples/demo/` for a (fictional) look at the viewer output.
 
 ## Before you start: pin down scope with the user
 

@@ -32,12 +32,21 @@ It is not output from a real search; see [`SKILL.md`](./SKILL.md) for how real r
 
 ## Using it as a Claude Code Skill
 
+Personal skill (available in every project):
+
 ```bash
 git clone https://github.com/Polykarp-bit/job-hunt-researcher.git ~/.claude/skills/job-hunt-researcher
 ```
 
-Then in Claude Code, just ask for what you want — e.g. *"find me junior data engineer jobs around Munich, no
-internships, master's-degree level"* — and the skill takes it from there: scoping questions, tracker file, verified
+Project skill (this project only — commit it alongside your own code):
+
+```bash
+git clone https://github.com/Polykarp-bit/job-hunt-researcher.git .claude/skills/job-hunt-researcher
+```
+
+Either way, Claude Code picks it up automatically (see the [skills docs](https://code.claude.com/docs/en/skills)).
+Then just ask for what you want — e.g. *"find me junior data engineer jobs around Munich, no internships,
+master's-degree level"* — and the skill takes it from there: scoping questions, tracker file, verified
 `data/jobs.json`, and a viewer you can open locally.
 
 See [`SKILL.md`](./SKILL.md) for the full method (search strategy, verification rule, data schema).
