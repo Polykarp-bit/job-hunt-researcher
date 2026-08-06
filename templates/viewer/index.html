@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JobRadar</title>
+  <meta name="description" content="A lightweight, backend-free job tracker — filter, search, and check off listings from data/jobs.json.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap" id="app-root">
+    <header class="masthead">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 id="heading"></h1>
+      <p class="dek" id="description"></p>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <div class="controls" role="group" aria-label="Filter">
+      <div id="chip-row"></div>
+      <button class="chip" id="hide-checked-toggle" aria-pressed="false" title="Blendet bereits abgehakte Stellen aus">✓ Geprüfte ausblenden</button>
+      <span id="checked-count" class="checked-count">0 / 0 geprüft</span>
+      <div class="search-box">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="search" placeholder="Firma oder Ort filtern…" aria-label="Suche nach Firma oder Ort">
+      </div>
+    </div>
+
+    <div id="groups"></div>
+    <p class="empty-state" id="empty-state">Keine Treffer für diese Filterkombination.</p>
+
+    <section class="sources" id="sources"></section>
+
+    <footer class="meta"><span id="footer-text"></span></footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

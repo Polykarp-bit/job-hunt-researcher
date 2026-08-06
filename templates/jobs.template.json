@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "JobRadar",
+    "eyebrow": "JobRadar · personal job search",
+    "heading": "Open positions: <replace with your target role>",
+    "description": "<one or two sentences: who this is for, what's excluded (e.g. no internships, no senior roles), how listings are verified>",
+    "lastUpdated": "YYYY-MM-DD",
+    "statsExtra": [
+      { "value": "0", "label": "companies checked" },
+      { "value": "0", "label": "categories" }
+    ],
+    "categories": {
+      "junior": "Junior / Associate",
+      "trainee": "Trainee / Graduate Program"
+    },
+    "categoryOrder": ["junior", "trainee"],
+    "focusFilter": {
+      "label": "🎓 Junior / graduate-friendly",
+      "categories": ["junior", "trainee"],
+      "includeGradWelcome": true
+    },
+    "sourcesTitle": "Sources searched",
+    "sources": [
+      { "label": "Example job board search", "url": "https://example.com", "extra": "" }
+    ],
+    "directSourcesTitle": "Company career pages checked directly",
+    "directSources": [
+      "List company names here once you start finding results via their own career pages, not just aggregators."
+    ],
+    "notes": [
+      "<strong>Methodology:</strong> every listing below was fetched and verified individually (active, correct title/company/location) before being added.",
+      "<strong>Excluded:</strong> describe your exclusion rules here (internships, apprenticeships, senior/lead titles, retraining/bootcamp programs disguised as jobs, etc.)."
+    ],
+    "footer": "Compiled from directly-checked company career pages and job boards. Individual listings can go offline at any time."
+  },
+  "jobs": [
+    {
+      "role": "Junior Example Role (m/f/d)",
+      "company": "Example Company GmbH",
+      "loc": "Example City",
+      "cat": "junior",
+      "url": "https://example.com/careers/junior-example-role",
+      "note": "Optional: why this one is a borderline/interesting case",
+      "gradWelcome": true
+    }
+  ]
+}

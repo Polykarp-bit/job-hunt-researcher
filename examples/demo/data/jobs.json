@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "JobRadar — Demo",
+    "eyebrow": "JobRadar · fictional demo data",
+    "heading": "Open positions: Junior Software & AI roles",
+    "description": "Fictional example data — shows how the viewer looks and behaves. No real companies or listings; swap templates/jobs.template.json for your own search.",
+    "lastUpdated": "2026-01-01",
+    "statsExtra": [
+      { "value": "6", "label": "companies (fictional)" },
+      { "value": "4", "label": "categories" }
+    ],
+    "categories": {
+      "junior": "Junior / Associate",
+      "dev": "Software Development",
+      "ai": "AI / ML",
+      "trainee": "Trainee / Graduate"
+    },
+    "categoryOrder": ["junior", "dev", "ai", "trainee"],
+    "focusFilter": {
+      "label": "🎓 Junior & graduate-friendly",
+      "categories": ["junior", "trainee"],
+      "includeGradWelcome": true
+    },
+    "sourcesTitle": "Sources (fictional, for demo purposes)",
+    "sources": [
+      { "label": "Example job board — junior developer search", "url": "https://example.com/jobs/junior-developer", "extra": "(demo only)" }
+    ],
+    "directSourcesTitle": "Company career pages checked directly (fictional)",
+    "directSources": [
+      "This is placeholder text — in a real run, this lists companies whose own career page (not a job board) produced a verified listing."
+    ],
+    "notes": [
+      "<strong>This is demo data.</strong> Every company, role, and link on this page is fictional and used only to show how the viewer renders <code>data/jobs.json</code>. See <a href=\"../../SKILL.md\">SKILL.md</a> for how real searches are run and verified.",
+      "<strong>Try it:</strong> use the category chips, the search box, and the checkboxes on the right — checked state persists in your browser's localStorage."
+    ],
+    "footer": "Fictional demo dataset — ships with job-hunt-researcher to illustrate the viewer, not to represent a real search."
+  },
+  "jobs": [
+    { "role": "Junior Backend Developer (m/f/d)", "company": "Acme Software GmbH", "loc": "Example City", "cat": "junior", "url": "https://example.com/careers/junior-backend-developer", "gradWelcome": true },
+    { "role": "Junior Frontend Developer (React)", "company": "Northwind Digital AG", "loc": "Example City", "cat": "junior", "url": "https://example.com/careers/junior-frontend-developer" },
+    { "role": "Software Engineer — Platform Team", "company": "Globex Technologies", "loc": "Example City", "cat": "dev", "url": "https://example.com/careers/software-engineer-platform" },
+    { "role": "AI Engineer / Applied ML (m/f/d)", "company": "Initech Labs", "loc": "Example City", "cat": "ai", "url": "https://example.com/careers/ai-engineer", "note": "No 'Junior' in the title, but no multi-year experience requirement either — borderline case, included per the skill's verification rules." },
+    { "role": "Junior Data Scientist", "company": "Umbrella Analytics", "loc": "Neighboring Town", "cat": "ai", "url": "https://example.com/careers/junior-data-scientist" },
+    { "role": "Graduate Program: Software Engineering", "company": "Wayne Consulting", "loc": "Example City", "cat": "trainee", "url": "https://example.com/careers/graduate-program-swe" }
+  ]
+}
